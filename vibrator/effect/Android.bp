@@ -1,5 +1,5 @@
 cc_library_shared {
-    name: "libqtivibratoreffect",
+    name: "libxiaomivibratoreffect",
     vendor: true,
     cflags: Common_CFlags,
     srcs: ["effect.cpp"],
