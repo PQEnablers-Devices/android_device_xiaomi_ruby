@@ -5,6 +5,7 @@ cc_library_shared {
     srcs: ["effect.cpp"],
     shared_libs: [
         "libcutils",
+        "liblog",
         "libutils",
     ],
     export_include_dirs: ["."]
