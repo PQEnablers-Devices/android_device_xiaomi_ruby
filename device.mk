@@ -70,6 +70,9 @@ PRODUCT_PACKAGES += \
     init.stnfc.rc \
     ueventd.mt6877.rc
 
+PRODUCT_PACKAGES += \
+    init.recovery.mt6877.rc
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
