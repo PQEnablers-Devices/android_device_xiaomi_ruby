@@ -159,5 +159,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3.vendor \
+    android.hardware.usb.gadget@1.1.vendor
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/ruby/ruby-vendor.mk)
