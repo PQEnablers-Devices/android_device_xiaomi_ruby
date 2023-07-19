@@ -463,6 +463,9 @@ vendor/firmware/txpowerctrl_gl_u.cfg
 vendor/firmware/txpowerctrl_in.cfg
 vendor/firmware/txpowerctrl_in_u.cfg
 
+# ConsumerIr
+vendor/lib64/hw/consumerir.common.so
+
 # Display
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service

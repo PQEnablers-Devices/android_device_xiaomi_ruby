@@ -42,6 +42,9 @@ ro.vendor.connsys.dedicated.log.port=bt,wifi,ics,btmcu,wifimcu
 ro.vendor.connsys.dedicated.log=1
 vendor.connsys.driver.ready=no
 
+# ConsumerIr
+ro.hardware.consumerir=common
+
 # Display
 debug.mediatek.appgamepq_compress=1
 debug.sf.disable_backpressure=1
