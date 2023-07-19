@@ -32,6 +32,16 @@ ro.vendor.bt.platform=6877
 ro.vendor.mtk.bt_sap_enable=true
 vendor.bluetooth.ldac.abr=true
 
+# Connsys
+persist.vendor.connsys.chipid=-1
+persist.vendor.connsys.coredump.mode=0
+persist.vendor.connsys.dynamic.dump=0
+persist.vendor.connsys.patch.version=-1
+persist.vendor.connsysfw.enable=true
+ro.vendor.connsys.dedicated.log.port=bt,wifi,ics,btmcu,wifimcu
+ro.vendor.connsys.dedicated.log=1
+vendor.connsys.driver.ready=no
+
 # Display
 debug.mediatek.appgamepq_compress=1
 debug.sf.disable_backpressure=1
@@ -118,3 +128,9 @@ ro.hardware.wechat=beanpod
 ro.vendor.mtk_microtrust_tee_support=1
 ro.vendor.mtk_svp_on_mtee_support=1
 ro.vendor.mtk_tee_gp_support=1
+
+# Wi-Fi
+ro.vendor.wifi.sap.concurrent.iface=ap1
+ro.vendor.wifi.sap.interface=ap0
+ro.vendor.wlan.chrdev=wmt_chrdev_wifi
+ro.vendor.wlan.gen=gen4m
