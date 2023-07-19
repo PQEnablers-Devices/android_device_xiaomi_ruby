@@ -690,6 +690,41 @@ vendor/lib64/libnvram_sec.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
+# Media
+vendor/bin/vpud
+vendor/etc/init/vpud.rc
+vendor/lib/libvcodec_oal.so
+vendor/lib/libvcodec_utility.so
+vendor/lib/libvcodecdrv.so
+vendor/lib/libvcodecdrv_header_stub.so
+vendor/lib/libvpu.so
+vendor/lib/libvpu5.so
+vendor/lib/libvpud_vcodec.so
+
+# Media (OMX)
+vendor/lib/libMtkOmxAdpcmDec.so
+vendor/lib/libMtkOmxAlacDec.so
+vendor/lib/libMtkOmxCore.so
+vendor/lib/libMtkOmxGsmDec.so
+vendor/lib/libMtkOmxMp3Dec.so
+vendor/lib/libadpcmdec_mtk.so
+vendor/lib/libmp3dec_mtk.so
+vendor/lib/libstagefrighthw.so
+vendor/lib64/libstagefrighthw.so
+
+# Media (C2)
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b:vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
+vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
+vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
+vendor/lib64/libcodec2_mtk_c2store.so
+vendor/lib64/libcodec2_mtk_vdec.so
+vendor/lib64/libcodec2_mtk_venc.so
+vendor/lib64/libcodec2_vpp_dolby_plugin.so
+vendor/lib64/libdolbyottcameracontrol.so
+vendor/lib64/libdolbyplugin.so
+vendor/lib64/libfiltersimulation.so
+vendor/lib64/libformatter.so
+
 # USB
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
