@@ -1,5 +1,8 @@
 # Unpinned blobs from ruby-user 12 SP1A.210812.016 V14.0.6.0.SMOMIXM release-keys
 
+# Batterysecret
+vendor/bin/batterysecret
+
 # Display
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
