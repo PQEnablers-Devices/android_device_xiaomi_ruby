@@ -427,6 +427,16 @@ vendor/etc/audio_param_m16u/mispeech_param.bin
 # Batterysecret
 vendor/bin/batterysecret
 
+# Connectivity
+vendor/bin/conninfra_loader
+vendor/firmware/conninfra.cfg
+vendor/firmware/soc5_0_ram_mcu_1_1_hdr.bin
+vendor/firmware/soc5_0_ram_wmmcu_1_1_hdr.bin
+vendor/firmware/txpowerctrl_gl.cfg
+vendor/firmware/txpowerctrl_gl_u.cfg
+vendor/firmware/txpowerctrl_in.cfg
+vendor/firmware/txpowerctrl_in_u.cfg
+
 # Display
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
