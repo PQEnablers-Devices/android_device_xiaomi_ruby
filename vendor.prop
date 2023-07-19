@@ -11,6 +11,7 @@ vendor.audio.spkcal.copy.inhal=true
 vendor.audiohal.telephonytx.type=2
 
 # Bluetooth
+bluetooth.device.class_of_device=90,2,12
 persist.bluetooth.a2dp_offload.cap=sbc-aac
 persist.bluetooth.a2dp_offload.disabled=true
 ro.bluetooth.a2dp_offload.supported=true
