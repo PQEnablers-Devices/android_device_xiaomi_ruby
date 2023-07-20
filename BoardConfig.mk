@@ -6,6 +6,8 @@
 
 DEVICE_PATH := device/xiaomi/ruby
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # A/B
 AB_OTA_UPDATER := true
 BOARD_USES_RECOVERY_AS_BOOT := true
