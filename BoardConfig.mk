@@ -74,6 +74,8 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
