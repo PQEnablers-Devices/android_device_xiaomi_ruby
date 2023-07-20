@@ -121,7 +121,8 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport.vendor \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    android.hidl.allocator@1.0.vendor
 
 # Keymaster
 PRODUCT_PACKAGES += \
