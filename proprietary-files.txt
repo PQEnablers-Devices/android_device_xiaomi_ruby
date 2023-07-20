@@ -1,5 +1,9 @@
 # Unpinned blobs from ruby-user 12 SP1A.210812.016 V14.0.6.0.SMOMIXM release-keys
 
+# AEE
+vendor/lib/libaedv.so
+vendor/lib64/libaedv.so
+
 # Batterysecret
 vendor/bin/batterysecret
 
