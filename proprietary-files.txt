@@ -43,6 +43,7 @@ vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libvoiprec.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
+vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libnotifyaudiohal.so
 
 # Audio Configs
