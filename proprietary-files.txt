@@ -696,6 +696,16 @@ vendor/lib64/libdolbyplugin.so
 vendor/lib64/libfiltersimulation.so
 vendor/lib64/libformatter.so
 
+# Sensors
+vendor/etc/elliptic_sensor.xml
+vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
+vendor/lib64/hw/sensors.elliptic.so
+vendor/lib64/hw/sensors.mt6877.so
+vendor/lib64/libhfmanager.so
+vendor/lib64/libhwm.so
+vendor/lib64/libksensor.so
+vendor/lib64/libsensor_custom.so
+
 # USB
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
