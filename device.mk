@@ -154,6 +154,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayRubyPlus \
     FrameworksResOverlayRubyProPlus \
     FrameworksResOverlayRubyPro \
+    SettingsOverlayRuby \
     SystemUIOverlayRuby \
     WifiResOverlayRuby
 
