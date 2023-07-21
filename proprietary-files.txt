@@ -810,6 +810,7 @@ vendor/lib64/libstorage_otp.so
 vendor/lib64/libsysenv.so
 vendor/lib64/libtrm.so
 vendor/lib64/libwpfa.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 
 # Radio (IMS)
@@ -827,6 +828,10 @@ vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# Secure Element
+vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
+vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 
 # Sensors
 vendor/etc/elliptic_sensor.xml
