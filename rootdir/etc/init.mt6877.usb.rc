@@ -946,7 +946,7 @@ on property:ro.boot.usbconfig=3
     setprop vendor.usb.acm_idx "1,4"
 
 # high temp notice supported
-on property:ro.product.device=ruby
+on property:ro.boot.product.hardware.sku=ruby
   setprop persist.vendor.hightemp.notice true
-on property:ro.product.device=rubyplus
+on property:ro.boot.product.hardware.sku=rubyplus
   setprop persist.vendor.hightemp.notice true
