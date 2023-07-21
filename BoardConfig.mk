@@ -15,7 +15,6 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 AB_OTA_PARTITIONS := \
     boot \
-    dtbo \
     system \
     product \
     vendor \
