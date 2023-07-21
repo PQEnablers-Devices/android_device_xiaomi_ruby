@@ -1,31 +1,5 @@
-# This file needs to be executed by vendor_init at boot of the device,
-# in normal and FM mode.
+on property:ro.boot.hwc=CN
+    setprop persist.vendor.nfc.config_file_name /vendor/etc/st21nfc_conf_${ro.boot.product.hardware.sku}.conf
 
-# Start the HAL service in all modes (FM, meta, normal)
-on post-fs
-    start nfc_hal_service
-
-# For factory mode, nfcstackp to create the socket as vendor here
-on post-fs-data
-    mkdir /data/vendor/nfc_socket 0770 nfc nfc
-
-# start STFlashTool at boot to ensure a NFC FW is loaded for factory tests
-service stflashtool /vendor/bin/STFlashTool
-    class late_start
-    user nfc
-    group nfc
-    oneshot
-
-service nfcstackp_vendor /vendor/bin/nfcstackp-vendor
-    class late_start
-    user nfc
-    group nfc
-    disabled
-
-# start nfcstackp_vendor by properties (FM or EM HIDL will set value)
-on property:vendor.nfc.nfcstackp.enable=0
-    stop nfcstackp_vendor
-
-on property:vendor.nfc.nfcstackp.enable=1
-    start nfcstackp_vendor
-
+on property:ro.boot.hwc=GL
+    setprop persist.vendor.nfc.config_file_name /vendor/etc/st21nfc_conf_${ro.boot.product.hardware.sku}_gl.conf
