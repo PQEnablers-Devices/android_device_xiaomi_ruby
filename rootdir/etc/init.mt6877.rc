@@ -251,10 +251,6 @@ on post-fs-data
     chmod 0660 /dev/spm
     chown system system /dev/spm
 
-    # Avoid the problem of loading libfdtrack.so caused by fd surge
-    setprop persist.sys.debug.fdtrack_enable_threshold 2048
-    setprop persist.sys.debug.fdtrack_abort_threshold 4096
-
     # GPS
     chmod 0775 /vendor/xbin/MPED
     chmod 0666 /dev/gps_emi
