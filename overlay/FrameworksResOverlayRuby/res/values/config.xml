@@ -498,4 +498,9 @@
     <string-array name="config_biometric_sensors">
         <item>0:2:15</item>
     </string-array>
+
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+         manually by the user. Off by default, since the expected haptic feedback may not be
+         available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
 </resources>
