@@ -11,14 +11,14 @@
      NOTE: The naming convention is "config_camelCaseValue". Some legacy
      entries do not follow the convention, but all new entries should. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- the padding on the start of the statusbar -->
-    <dimen name="status_bar_padding_start">12dp</dimen>
+    <!-- Adjust the icon padding in status bar for rounded corners. -->
+    <dimen name="rounded_corner_content_padding">47.0px</dimen>
 
-    <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">5dp</dimen>
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">14.0px</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
-    <dimen name="keyguard_carrier_text_margin">20dp</dimen>
+    <dimen name="keyguard_carrier_text_margin">30dp</dimen>
 
     <!-- Height of the status bar header bar when on Keyguard -->
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
