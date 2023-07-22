@@ -685,6 +685,34 @@ vendor/thh/ta/e97c270ea5c44c58bcd3384a2fa2539e.ta
 vendor/thh/ta/fc32e4da17d342449b01c992d56d71bf.ta
 vendor/thh/ta/isee_model.json
 
+# Neural Networks
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml
+vendor/lib64/mt6877/libneuron_platform.vpu.so:vendor/lib64/libneuron_platform.vpu.so
+vendor/lib64/mt6877/libneuron_runtime.5.so:vendor/lib64/libneuron_runtime.5.so
+vendor/lib64/mt6877/libneuron_runtime.so:vendor/lib64/libneuron_runtime.so
+vendor/lib64/APUWareApusysServer.so
+vendor/lib64/APUWareUtilsServer.so
+vendor/lib64/APUWareXrpServer_v2.so
+vendor/lib64/libapu_mdw.so
+vendor/lib64/libapu_mdw_batch.so
+vendor/lib64/libapusys.so
+vendor/lib64/libarmnn.so
+vendor/lib64/libarmnn_ndk.mtk.vndk.so
+vendor/lib64/libcmdl.so
+vendor/lib64/libcmdl_ndk.mtk.vndk.so
+vendor/lib64/libneuron_adapter.so
+vendor/lib64/libneuron_graph_delegate.mtk.so
+vendor/lib64/libneuron_platform.so
+vendor/lib64/libneuron_wrapper.so
+vendor/lib64/libneuropilot_hal_utils.so
+vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
+vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
+vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
+vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
+vendor/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
+
 # NFC
 vendor/firmware/st21nfc_fw7.bin
 
@@ -718,6 +746,7 @@ vendor/lib/libvcodecdrv_header_stub.so
 vendor/lib/libvpu.so
 vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
+vendor/lib64/libvpu.so
 
 # Media (OMX)
 vendor/lib/libMtkOmxAdpcmDec.so
