@@ -1,2 +1,5 @@
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
+
+# Zygote
+zygote.critical_window.minute=10
