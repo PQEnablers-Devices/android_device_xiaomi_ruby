@@ -285,24 +285,29 @@ ScopedAStatus Usb::switchRole(const string& in_portName,
     if (in_role.getTag() == PortRole::mode) {
         roleSwitch = switchMode(in_portName, in_role, this);
     } else {
-        fp = fopen(filename.c_str(), "w");
-        if (fp != NULL) {
-            int ret = fputs(convertRoletoString(in_role).c_str(), fp);
-            fclose(fp);
-            if ((ret != EOF) && ReadFileToString(filename, &written)) {
-                written = Trim(written);
-                extractRole(&written);
-                ALOGI("written: %s", written.c_str());
-                if (written == convertRoletoString(in_role)) {
-                    roleSwitch = true;
+        for (int i = 0; i < 20; i++) {
+            fp = fopen(filename.c_str(), "w");
+            if (fp != NULL) {
+                int ret = fputs(convertRoletoString(in_role).c_str(), fp);
+                fclose(fp);
+                if ((ret != EOF) && ReadFileToString(filename, &written)) {
+                    written = Trim(written);
+                    extractRole(&written);
+                    ALOGI("written: %s", written.c_str());
+                    if (written == convertRoletoString(in_role)) {
+                        roleSwitch = true;
+                        break; // Role switch succeeded
+                    } else {
+                        ALOGE("Role switch failed");
+                    }
                 } else {
-                    ALOGE("Role switch failed");
+                    ALOGE("failed to update the new role");
                 }
             } else {
-                ALOGE("failed to update the new role");
+                ALOGE("fopen failed");
             }
-        } else {
-            ALOGE("fopen failed");
+            // Sleep 50ms between attempts
+            usleep(50000);
         }
     }
 
