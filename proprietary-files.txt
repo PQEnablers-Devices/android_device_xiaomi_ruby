@@ -2022,11 +2022,6 @@ vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libssccalapi.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
 
-# USB
-vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
-vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
--vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
-
 # Vibrator
 vendor/firmware/0_click_P_RTP.bin
 vendor/firmware/1_doubelClick_P_RTP.bin
