@@ -1519,6 +1519,37 @@ vendor/lib64/hw/gps.default.so
 vendor/lib64/libDR.so
 vendor/lib64/libmnl.so
 
+# IMS - from ruby-user 13 TP1A.220624.014 V14.0.3.0.TMOEUXM release-keys
+bin/vtservice|139ddac4f4c264c105dd8e1e0c658ef653faeb32
+etc/init/init.vtservice.rc|abcbc3ffc316b8f1cedffa949aac3b46670d64bc
+-framework/mediatek-common.jar|65cb5b86acb0eb42bb3ec2987e1d80a88ea0756a
+-framework/mediatek-framework.jar|37f3a324333413eb6eb505e4c3d945132cede443
+-framework/mediatek-ims-base.jar|8e58bc3840adef5c23322267520d677b492eebc2
+-framework/mediatek-ims-common.jar|4b5e31eb137600a2d49d17611ebf8939d8722bc1
+-framework/mediatek-ims-extension-plugin.jar|fbadb06fbf2762b181e15c88cbd7ae299a89be71
+-framework/mediatek-telecom-common.jar|b80be86b779269c7078670d573626f0f860427d4
+-framework/mediatek-telephony-base.jar|357c2986f3c17adf8eb70f3b3318949a2f48f2cf
+-framework/mediatek-telephony-common.jar|6eddc4c33fb73c5aa9828be2dd82bf345f0d338f
+-framework/mediatek-wfo-legacy.jar|56857a094249cc3c1ebecea632caecccf8b25c31
+lib64/libcomutils.so|fda05df0a9e81f9b6e441e9d96a3276ed324f073
+lib64/libimsma.so|417c5c34b4c68f82c0f33198954c05bae5983ef1
+lib64/libimsma_adapt.so|8394e9f60c65dd069b6bf7bc506294049e699cae
+lib64/libimsma_rtp.so|a39e921d519458fcea90283311654505715938c2
+lib64/libimsma_socketwrapper.so|f63849d08340c59153b99d18b9cfdbc90ef7d1e7
+lib64/libmtk_vt_service.so|d87625a2945771f1271b100a65c0afd60c60d7fd
+lib64/libmtk_vt_wrapper.so|ba3693e589d27069c78ef9491c6e945ecbdaedba
+lib64/libmtkperf_client.so|701883c0d23c4e27ffbccca4991bba3efe205c44
+lib64/libsignal.so|21750f26380a01fe76542bb112758306e59ad86d
+lib64/libsink.so|76a23912eab7f71978207907bc5bfcfe302a6c78
+lib64/libsource.so|6e48d27e1d2f6d75d6abbe4bef2330edfb3f37ae
+lib64/libvcodec_cap.so|061a4e4d6bf4f0a186571e83034d3c0a88ba3f77
+lib64/libvcodec_capenc.so|5f981214f184c32f03a609adf9073f31ded82d65
+lib64/libvsim-adaptor-client.so|2332f7632bb4cf20b99cfcda10a4cb8fb904e59d
+lib64/libvt_avsync.so|6593f835b38cef623d4d20aa5cd553904415b41d
+-priv-app/ImsService/ImsService.apk|a7d83946238c9ac57fd289255a926cc41362bc26
+system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so|e9e115cdba63fe496155fddb27818f2e08216efb
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|fd5431b7f270c6e0083a0825571a705d87691dc6
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
 vendor/bin/bp_kmsetkey_ca
@@ -1897,6 +1928,7 @@ vendor/lib/libipsec_ims_shr.so
 vendor/lib/librcs_volte_core.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
+vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so

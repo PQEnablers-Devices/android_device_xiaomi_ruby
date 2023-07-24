@@ -1,5 +1,10 @@
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # Zygote
 zygote.critical_window.minute=10
