@@ -1519,6 +1519,11 @@ vendor/lib64/hw/gps.default.so
 vendor/lib64/libDR.so
 vendor/lib64/libmnl.so
 
+# Hotword - ruby-user 13 TP1A.220624.014 V14.0.3.0.TMOEUXM release-keys
+-product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk|496947e07b5fb413f0354c0b0897ffe71b32b7ed
+-product/priv-app/HotwordEnrollmentXGoogleRISCV/HotwordEnrollmentXGoogleRISCV.apk|e3cf61bf81643e173034034615c356e82363dedf
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar|a418f5697951468fb93788b6e92d2912e7ae7149
+
 # IMS - from ruby-user 13 TP1A.220624.014 V14.0.3.0.TMOEUXM release-keys
 bin/vtservice|139ddac4f4c264c105dd8e1e0c658ef653faeb32
 etc/init/init.vtservice.rc|abcbc3ffc316b8f1cedffa949aac3b46670d64bc
