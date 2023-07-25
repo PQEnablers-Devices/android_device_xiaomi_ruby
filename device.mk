@@ -216,6 +216,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlayRuby \
     FrameworksResOverlayRuby \
     FrameworksResOverlayRubyPlus \
     FrameworksResOverlayRubyProPlus \
