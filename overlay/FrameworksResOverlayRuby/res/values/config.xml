@@ -421,6 +421,12 @@
          non-zero. -->
     <integer name="config_defaultPeakRefreshRate">120</integer>
 
+    <!-- Array of packages to exclude from location indicators -->
+    <string-array name="config_locationExtraPackageNames" translatable="false">
+        <!-- ImsService -->
+        <item>com.mediatek.ims</item>
+    </string-array>
+
      <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
