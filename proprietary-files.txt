@@ -1234,12 +1234,6 @@ vendor/lib/libpqpconfig.so
 vendor/lib/libudf.so
 vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
-vendor/lib/vendor.mediatek.hardware.mms@1.0.so
-vendor/lib/vendor.mediatek.hardware.mms@1.1.so
-vendor/lib/vendor.mediatek.hardware.mms@1.2.so
-vendor/lib/vendor.mediatek.hardware.mms@1.3.so
-vendor/lib/vendor.mediatek.hardware.mms@1.4.so
-vendor/lib/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.10.so
@@ -1298,12 +1292,6 @@ vendor/lib64/libudf.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.2.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.3.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
@@ -1860,6 +1848,25 @@ vendor/lib64/libdolbyottcameracontrol.so
 vendor/lib64/libdolbyplugin.so
 vendor/lib64/libfiltersimulation.so
 vendor/lib64/libformatter.so
+
+# MMS
+vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
+vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
+vendor/lib/vendor.mediatek.hardware.mms@1.0.so
+vendor/lib/vendor.mediatek.hardware.mms@1.1.so
+vendor/lib/vendor.mediatek.hardware.mms@1.2.so
+vendor/lib/vendor.mediatek.hardware.mms@1.3.so
+vendor/lib/vendor.mediatek.hardware.mms@1.4.so
+vendor/lib/vendor.mediatek.hardware.mms@1.5.so
+vendor/lib/vendor.mediatek.hardware.mms@1.6.so
+vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.2.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.3.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
 
 # Perf
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
