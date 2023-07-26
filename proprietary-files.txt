@@ -1175,6 +1175,33 @@ vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
+# Camera Configs
+vendor/etc/camera/aivsModels1
+vendor/etc/camera/aivsParams
+vendor/etc/camera/aivsParams2
+vendor/etc/camera/com.xiaomi.dcal.wu.golden
+vendor/etc/camera/com.xiaomi.dcal.wu2.golden
+vendor/etc/camera/dof_mecp.bin
+vendor/etc/camera/dualcam_bokeh_params.json
+vendor/etc/camera/fold_qianzhi_512_edutpu140_ar36912_depth128_dd48_2_128_inscale_q12qrqfct_rotate45_scale_distortcolor_quantaware_step205420_without_softmax_mdla20_vpu.dla
+vendor/etc/camera/LDC_packdata_xiaomi_v1.dat
+vendor/etc/camera/LDC_packdata_xiaomi_v2.dat
+vendor/etc/camera/libalfpc_tuning.bin
+vendor/etc/camera/miai_psn_config.yaml
+vendor/etc/camera/model/dof_model/capture_cache
+vendor/etc/camera/model/dof_model/capture_model
+vendor/etc/camera/model/dof_model/capture_policy
+vendor/etc/camera/model/rt_model/preview_cache
+vendor/etc/camera/model/rt_model/preview_model
+vendor/etc/camera/model/rt_model/preview_policy
+vendor/etc/camera/preview_bokeh_params.json
+vendor/etc/camera/quantize_mtk_0.00246_1800-360620_singleinput_mdla20.dla
+vendor/etc/camera/sceneDetection.xml
+vendor/etc/camera/sceneDetection_india.xml
+vendor/etc/camera/skyseg_384_without_softmax_mdla20_vpu.dla
+vendor/etc/camera/vidhance_calibration
+vendor/etc/camera/vidhance_calibration_ofilm
+
 # Connectivity
 vendor/bin/conninfra_loader
 vendor/firmware/conninfra.cfg
