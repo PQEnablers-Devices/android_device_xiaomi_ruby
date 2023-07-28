@@ -94,6 +94,7 @@ debug.sf.hwc.min.duration=17000000
 debug.sf.latch_unsignaled=1
 debug.sf.late.app.duration=20000000
 debug.sf.late.sf.duration=27600000
+debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
 persist.vendor.sys.pq.disp.mi.soft.brightness=1
