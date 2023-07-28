@@ -82,6 +82,7 @@ debug.sf.early.sf.duration=27600000
 debug.sf.earlyGl.app.duration=20000000
 debug.sf.earlyGl.sf.duration=27600000
 debug.sf.enable_hwc_vds=0
+debug.sf.enable_transaction_tracing=false
 debug.sf.high_fps.early.app.duration=10000000
 debug.sf.high_fps.early.sf.duration=13800000
 debug.sf.high_fps.earlyGl.app.duration=10000000
