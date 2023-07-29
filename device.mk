@@ -318,6 +318,7 @@ PRODUCT_PACKAGES += \
     init.batterysecret.rc \
     init.cgroup.rc \
     init.connectivity.rc \
+    init.fingerprint.rc \
     init.mi_thermald.rc \
     init.modem.rc \
     init.mt6877.rc \

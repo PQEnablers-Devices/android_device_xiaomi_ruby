@@ -1,0 +1,295 @@
+on boot
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+    chown system system /sys/bus/platform/devices/fingerprint/clk_enable
+    chmod 0660 /sys/bus/platform/devices/fingerprint/clk_enable
+    chown system system /sys/bus/platform/devices/fingerprint/power_ctrl
+    chmod 0660 /sys/bus/platform/devices/fingerprint/power_ctrl
+    chown system system /sys/bus/platform/devices/fingerprint/wakeup_enable
+    chmod 0660 /sys/bus/platform/devices/fingerprint/wakeup_enable
+    chown system system /sys/bus/platform/devices/fingerprint/hw_reset
+    chmod 0660 /sys/bus/platform/devices/fingerprint/hw_reset
+    chown system system /sys/bus/platform/devices/fingerprint/screen
+    chmod 0660 /sys/bus/platform/devices/fingerprint/screen
+    chown system system /sys/bus/platform/devices/fingerprint/irq
+    chmod 0660 /sys/bus/platform/devices/fingerprint/irq
+    chown system system /sys/bus/spi/devices/spi5.0/authen_fd/performance
+    chmod 0660 /sys/bus/spi/devices/spi5.0/authen_fd/performance
+    chown system system /sys/bus/platform/devices/fingerprint/fingerdown_wait
+
+on post-fs-data
+    mkdir /data/vendor/misc 01771 system system
+    mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/fpdump 0770 system system
+    mkdir /data/vendor/gf_data 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /data/vendor/fingerprint 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
+
+    #L12A
+    chown system system /mnt/vendor/persist/goodix/BMatrix.so
+    chown system system /mnt/vendor/persist/goodix/ExtraBMatrix.so
+    chown system system /mnt/vendor/persist/goodix/HLBMatrix.so
+    chown system system /mnt/vendor/persist/goodix/caliParamsInfo.so
+    chown system system /mnt/vendor/persist/goodix/cali_data.so
+    chown system system /mnt/vendor/persist/goodix/chartbase.so
+    chown system system /mnt/vendor/persist/goodix/gf_extra_feature.so
+    chown system system /mnt/vendor/persist/goodix/highflesh.so
+    chown system system /mnt/vendor/persist/goodix/highflesh.so.bak
+    chown system system /mnt/vendor/persist/goodix/midbase.so
+    chown system system /mnt/vendor/persist/goodix/midbase.so.bak
+    chown system system /mnt/vendor/persist/goodix/oemInfo.so
+
+    chmod 0600 /mnt/vendor/persist/goodix/BMatrix.so
+    chmod 0600 /mnt/vendor/persist/goodix/ExtraBMatrix.so
+    chmod 0600 /mnt/vendor/persist/goodix/HLBMatrix.so
+    chmod 0600 /mnt/vendor/persist/goodix/caliParamsInfo.so
+    chmod 0600 /mnt/vendor/persist/goodix/cali_data.so
+    chmod 0600 /mnt/vendor/persist/goodix/chartbase.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_extra_feature.so
+    chmod 0600 /mnt/vendor/persist/goodix/highflesh.so
+    chmod 0600 /mnt/vendor/persist/goodix/highflesh.so.bak
+    chmod 0600 /mnt/vendor/persist/goodix/midbase.so
+    chmod 0600 /mnt/vendor/persist/goodix/midbase.so.bak
+    chmod 0600 /mnt/vendor/persist/goodix/oemInfo.so
+
+    #L2M
+    chown system system /mnt/vendor/persist/goodix/autoCalibrationParams.so_0_0
+    chown system system /mnt/vendor/persist/goodix/autoCalibrationParams.so_0_1
+    chown system system /mnt/vendor/persist/goodix/autoCalibrationParams.so_0_2
+    chown system system /mnt/vendor/persist/goodix/autoCalibrationParams.so_0_3
+    chown system system /mnt/vendor/persist/goodix/dec-expo_autoCalibrationParams.so_0_0
+    chown system system /mnt/vendor/persist/goodix/dec-expo_autoCalibrationParams.so_0_1
+    chown system system /mnt/vendor/persist/goodix/dec-expo_autoCalibrationParams.so_0_2
+    chown system system /mnt/vendor/persist/goodix/dec-expo_autoCalibrationParams.so_0_3
+    chown system system /mnt/vendor/persist/goodix/gf_cali_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_cali_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_cali_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_cali_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_cali_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_cali_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_cali_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_cali_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_darkbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_darkbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_darkbase_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_darkbase_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_darkbase_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_darkbase_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_darkbase_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_darkbase_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_extra_feature.so
+    chown system system /mnt/vendor/persist/goodix/gf_fake_base_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_fake_base_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_fake_base_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_fake_base_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_fake_base_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_fake_base_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_fake_base_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_fake_base_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_fleshbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_fleshbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_fleshbase_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_fleshbase_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_fleshbase_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_fleshbase_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_fleshbase_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_fleshbase_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_flocbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_flocbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_high_expo_fake_base_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_high_expo_fake_base_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_high_expo_fake_base_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_high_expo_fake_base_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_high_expo_fake_base_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_high_expo_fake_base_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_high_expo_fake_base_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_high_expo_fake_base_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_darkbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_darkbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_darkbase_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_darkbase_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_darkbase_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_darkbase_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_darkbase_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_darkbase_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fake_base_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fake_base_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fake_base_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fake_base_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fake_base_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fake_base_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fake_base_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fake_base_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fleshbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fleshbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fleshbase_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fleshbase_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fleshbase_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fleshbase_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fleshbase_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_fleshbase_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_darkbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_darkbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_darkbase_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_darkbase_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_darkbase_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_darkbase_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_darkbase_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_darkbase_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_fleshbase_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_fleshbase_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_fleshbase_1.so
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_fleshbase_1.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_fleshbase_2.so
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_fleshbase_2.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_fleshbase_3.so
+    chown system system /mnt/vendor/persist/goodix/gf_nocf_fleshbase_3.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_otp_0.so
+    chown system system /mnt/vendor/persist/goodix/gf_otp_0.so_bak
+    chown system system /mnt/vendor/persist/goodix/gf_persist.so
+    chown system system /mnt/vendor/persist/goodix/gf_persist.so_bak
+
+    chmod 0600 /mnt/vendor/persist/goodix/autoCalibrationParams.so_0_0
+    chmod 0600 /mnt/vendor/persist/goodix/autoCalibrationParams.so_0_1
+    chmod 0600 /mnt/vendor/persist/goodix/autoCalibrationParams.so_0_2
+    chmod 0600 /mnt/vendor/persist/goodix/autoCalibrationParams.so_0_3
+    chmod 0600 /mnt/vendor/persist/goodix/dec-expo_autoCalibrationParams.so_0_0
+    chmod 0600 /mnt/vendor/persist/goodix/dec-expo_autoCalibrationParams.so_0_1
+    chmod 0600 /mnt/vendor/persist/goodix/dec-expo_autoCalibrationParams.so_0_2
+    chmod 0600 /mnt/vendor/persist/goodix/dec-expo_autoCalibrationParams.so_0_3
+    chmod 0600 /mnt/vendor/persist/goodix/gf_cali_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_cali_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_cali_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_cali_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_cali_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_cali_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_cali_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_cali_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_darkbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_darkbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_darkbase_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_darkbase_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_darkbase_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_darkbase_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_darkbase_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_darkbase_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_dec_expo_fake_base_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_extra_feature.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fake_base_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fake_base_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fake_base_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fake_base_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fake_base_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fake_base_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fake_base_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fake_base_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fleshbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fleshbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fleshbase_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fleshbase_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fleshbase_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fleshbase_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fleshbase_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_fleshbase_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_flocbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_flocbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_high_expo_fake_base_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_high_expo_fake_base_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_high_expo_fake_base_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_high_expo_fake_base_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_high_expo_fake_base_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_high_expo_fake_base_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_high_expo_fake_base_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_high_expo_fake_base_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_darkbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_darkbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_darkbase_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_darkbase_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_darkbase_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_darkbase_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_darkbase_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_darkbase_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fake_base_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fake_base_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fake_base_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fake_base_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fake_base_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fake_base_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fake_base_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fake_base_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fleshbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fleshbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fleshbase_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fleshbase_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fleshbase_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fleshbase_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fleshbase_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_fleshbase_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_darkbase_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_lb_nocf_fleshbase_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_darkbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_darkbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_darkbase_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_darkbase_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_darkbase_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_darkbase_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_darkbase_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_darkbase_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_fleshbase_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_fleshbase_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_fleshbase_1.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_fleshbase_1.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_fleshbase_2.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_fleshbase_2.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_fleshbase_3.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_nocf_fleshbase_3.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_otp_0.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_otp_0.so_bak
+    chmod 0600 /mnt/vendor/persist/goodix/gf_persist.so
+    chmod 0600 /mnt/vendor/persist/goodix/gf_persist.so_bak

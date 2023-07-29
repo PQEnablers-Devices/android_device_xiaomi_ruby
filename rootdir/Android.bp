@@ -33,6 +33,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.fingerprint.rc",
+    src: "etc/init.fingerprint.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.mi_thermald.rc",
     src: "etc/init.mi_thermald.rc",
     sub_dir: "init/hw",
