@@ -1347,7 +1347,7 @@ vendor/lib64/libwvhidl.so
 
 # Fingerprint
 -vendor/etc/vintf/manifest/fod.xml
-vendor/lib64/hw/fingerprint.fpc_isee.so:vendor/lib64/hw/fingerprint.fpc_isee.default.so
+vendor/lib64/hw/fingerprint.fpc_isee.so:vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/com.fingerprints.extension@3.0.so
 vendor/lib64/libgf_ca.so
