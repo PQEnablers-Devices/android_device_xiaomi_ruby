@@ -71,3 +71,6 @@ product                           /product               erofs  ro              
 # External Storage
 /devices/platform/11240000.mmc*   auto                   auto   defaults                                                                                                     voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/usb0*           auto                   vfat   defaults                                                                                                     voldmanaged=usbotg:auto
+
+# ZRAM
+/dev/block/zram0                  none                   swap   defaults                                                                                                     zramsize=55%
