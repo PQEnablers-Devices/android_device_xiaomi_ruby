@@ -1245,12 +1245,14 @@ vendor/lib/libaal_key.so
 vendor/lib/libaal_mtk.so
 vendor/lib/libaalservice.so
 vendor/lib/libdre.so
+vendor/lib/libgamehdr.so
 vendor/lib/libged.so
 vendor/lib/libgpu_aux.so
 vendor/lib/libgpud.so
 vendor/lib/libgralloc_extra.so
 vendor/lib/libgralloc_metadata.so
 vendor/lib/libgralloctypes_mtk.so
+vendor/lib/libhdrvideo.so
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
 vendor/lib/libladder.so
@@ -1303,12 +1305,14 @@ vendor/lib64/libaal_mtk.so
 vendor/lib64/libaalservice.so
 vendor/lib64/libcomposer_ext.so
 vendor/lib64/libdre.so
+vendor/lib64/libgamehdr.so
 vendor/lib64/libged.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
 vendor/lib64/libgralloc_extra.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
+vendor/lib64/libhdrvideo.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libladder.so
@@ -1336,6 +1340,12 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
+
+# Display Configs
+vendor/etc/cust_color.xml
+vendor/etc/cust_color_dsi_m16_36_02_0b_dsc_vdo.xml
+vendor/etc/cust_color_dsi_m16_42_0d_0a_dsc_vdo.xml
+vendor/etc/cust_color_dsi_m16_45_02_0c_dsc_vdo.xml
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
