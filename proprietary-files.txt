@@ -1230,6 +1230,7 @@ vendor/lib/egl/libMEOW_trace.so
 vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.14-impl.so
+vendor/lib/hw/vulkan.mali.so
 vendor/lib/mt6877/libaiselector.so:vendor/lib/libaiselector.so
 vendor/lib/mt6877/libdpframework.so:vendor/lib/libdpframework.so
 vendor/lib/mt6877/libmtk_drvb.so:vendor/lib/libmtk_drvb.so
@@ -1286,6 +1287,7 @@ vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/hwcomposer.mt6877.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.14-impl.so
+vendor/lib64/hw/vulkan.mali.so
 vendor/lib64/mt6877/libaiselector.so:vendor/lib64/libaiselector.so
 vendor/lib64/mt6877/libdpframework.so:vendor/lib64/libdpframework.so
 vendor/lib64/mt6877/libmtk_drvb.so:vendor/lib64/libmtk_drvb.so
