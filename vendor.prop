@@ -90,7 +90,6 @@ debug.sf.high_fps.hwc.min.duration=14500000
 debug.sf.high_fps.late.app.duration=10000000
 debug.sf.high_fps.late.sf.duration=13800000
 debug.sf.hwc.min.duration=23000000
-debug.sf.latch_unsignaled=1
 debug.sf.late.app.duration=20000000
 debug.sf.late.sf.duration=27600000
 debug.sf.predict_hwc_composition_strategy=0
