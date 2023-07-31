@@ -2027,3 +2027,4 @@ vendor/etc/init/wlan_assistant.rc
 vendor/etc/wifi/passpointProfile.conf
 vendor/firmware/WIFI_RAM_CODE_soc5_0_1_1.bin
 vendor/firmware/wifi.cfg
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
