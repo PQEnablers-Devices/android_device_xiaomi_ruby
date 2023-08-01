@@ -224,6 +224,9 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayRubyPlus \
     FrameworksResOverlayRubyProPlus \
     FrameworksResOverlayRubyPro \
+    SettingsProviderOverlayRubyPlus \
+    SettingsProviderOverlayRubyProPlus \
+    SettingsProviderOverlayRubyPro \
     SettingsOverlayRuby \
     SystemUIOverlayRuby \
     TelephonyOverlayRuby \
