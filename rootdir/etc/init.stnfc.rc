@@ -4,10 +4,10 @@ service nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service-st
     group nfc
     disabled
 
-on property:ro.boot.hwc=CN
+on early-init && property:ro.boot.hwc=CN
     setprop ro.boot.product.vendor.sku nfc
     enable nfc_hal_service
 
-on property:ro.boot.hwc=GL
+on early-init && property:ro.boot.hwc=GL
     setprop ro.boot.product.vendor.sku nfc
     enable nfc_hal_service
