@@ -1,6 +1,9 @@
 # Batterysecret
 /(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
 
+# Fingerprint
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2.3-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
+
 # Light
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
 
