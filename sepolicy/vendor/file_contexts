@@ -7,5 +7,8 @@
 # Sensors
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.1-service\.ruby-multihal u:object_r:mtk_hal_sensors_exec:s0
 
+# Thermal
+/(vendor|system/vendor)/bin/mi_thermald u:object_r:mi_thermald_exec:s0
+
 # Vibrator
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.ruby u:object_r:hal_vibrator_default_exec:s0
