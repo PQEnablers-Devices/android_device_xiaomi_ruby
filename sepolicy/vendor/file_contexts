@@ -1,3 +1,7 @@
+# Audio
+/mnt/vendor/persist/audio/us_cal_v2 u:object_r:mtk_audiohal_data_file:s0
+/mnt/vendor/persist/factory/audio/aw_cali.bin u:object_r:mtk_audiohal_data_file:s0
+
 # Camera
 /mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
 /data/vendor/camera(/.*)? u:object_r:vendor_camera_data_file:s0
