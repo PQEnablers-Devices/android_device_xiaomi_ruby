@@ -67,22 +67,18 @@ namespace vibrator {
 InputFFDevice::InputFFDevice()
 {
     DIR *dp;
-    FILE *fp = NULL;
     struct dirent *dir;
     uint8_t ffBitmask[FF_CNT / 8];
     char devicename[PATH_MAX];
     const char *INPUT_DIR = "/dev/input/";
     char name[NAME_BUF_SIZE];
     int fd, ret;
-    int soc = property_get_int32("ro.vendor.qti.soc_id", -1);
 
     mVibraFd = INVALID_VALUE;
     mSupportGain = false;
     mSupportEffects = false;
-    mSupportExternalControl = false;
     mCurrAppId = INVALID_VALUE;
     mCurrMagnitude = 0x7fff;
-    mInExternalControl = false;
 
     dp = opendir(INPUT_DIR);
     if (!dp) {
@@ -135,24 +131,6 @@ InputFFDevice::InputFFDevice()
                 mSupportEffects = true;
             if (test_bit(FF_GAIN, ffBitmask))
                 mSupportGain = true;
-
-            if (soc <= 0 && (fp = fopen("/sys/devices/soc0/soc_id", "r")) != NULL) {
-                fscanf(fp, "%u", &soc);
-                fclose(fp);
-            }
-            switch (soc) {
-            case MSM_CPU_LAHAINA:
-            case APQ_CPU_LAHAINA:
-            case MSM_CPU_SHIMA:
-            case MSM_CPU_SM8325:
-            case APQ_CPU_SM8325P:
-            case MSM_CPU_YUPIK:
-                mSupportExternalControl = true;
-                break;
-            default:
-                mSupportExternalControl = false;
-                break;
-            }
             break;
         }
 
@@ -330,8 +308,6 @@ ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
         *_aidl_return |= IVibrator::CAP_AMPLITUDE_CONTROL;
     if (ff.mSupportEffects)
         *_aidl_return |= IVibrator::CAP_PERFORM_CALLBACK;
-    if (ff.mSupportExternalControl)
-        *_aidl_return |= IVibrator::CAP_EXTERNAL_CONTROL;
 
     ALOGD("QTI Vibrator reporting capabilities: %d", *_aidl_return);
     return ndk::ScopedAStatus::ok();
@@ -419,9 +395,6 @@ ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
     if (amplitude <= 0.0f || amplitude > 1.0f)
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_ILLEGAL_ARGUMENT));
 
-    if (ff.mInExternalControl)
-        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
-
     tmp = (uint8_t)(amplitude * 0xff);
     ret = ff.setAmplitude(tmp);
     if (ret != 0)
@@ -430,13 +403,8 @@ ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::setExternalControl(bool enabled) {
-    ALOGD("Vibrator set external control: %d", enabled);
-    if (!ff.mSupportExternalControl)
-        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
-
-    ff.mInExternalControl = enabled;
-    return ndk::ScopedAStatus::ok();
+ndk::ScopedAStatus Vibrator::setExternalControl(bool enabled __unused) {
+    return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
 ndk::ScopedAStatus Vibrator::getCompositionDelayMax(int32_t* maxDelayMs  __unused) {

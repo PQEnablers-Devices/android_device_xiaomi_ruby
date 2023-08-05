@@ -45,8 +45,6 @@ public:
     int setAmplitude(uint8_t amplitude);
     bool mSupportGain;
     bool mSupportEffects;
-    bool mSupportExternalControl;
-    bool mInExternalControl;
 private:
     int play(int effectId, uint32_t timeoutMs, long *playLengthMs);
     int mVibraFd;
