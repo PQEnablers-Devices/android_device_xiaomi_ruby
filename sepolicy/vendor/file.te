@@ -1,0 +1,2 @@
+# Display
+type vendor_sysfs_display, fs_type, sysfs_type;
