@@ -1,0 +1,8 @@
+# Allow access to the HALs
+hal_client_domain(mtk_hal_sensors, hal_audio)
+
+# Allow binder communication with hal_audio_default
+binder_call(mtk_hal_sensors, hal_audio_default)
+
+# Allow mtk_hal_sensors to find hal_audio_hwservice
+allow mtk_hal_sensors hal_audio_hwservice:hwservice_manager find;
