@@ -1,2 +1,5 @@
 # Light
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
+
+# Vibrator
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.ruby u:object_r:hal_vibrator_default_exec:s0
