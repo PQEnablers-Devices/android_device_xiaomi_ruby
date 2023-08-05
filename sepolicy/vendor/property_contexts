@@ -1,2 +1,5 @@
+# Camera
+persist.vendor.camera. u:object_r:vendor_camera_persist_prop:s0
+
 # Thermal
 vendor.sys.thermal. u:object_r:thermal_engine_prop:s0
