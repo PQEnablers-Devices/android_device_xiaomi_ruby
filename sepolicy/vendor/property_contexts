@@ -2,6 +2,9 @@
 persist.vendor.camera. u:object_r:vendor_camera_prop:s0
 vendor.camera. u:object_r:vendor_camera_prop:s0
 
+# Charge
+persist.vendor.accelerate.charge u:object_r:vendor_batterysecret_prop:s0
+
 # Fingerprint
 persist.vendor.sys.fp. u:object_r:vendor_fingerprint_persist_prop:s0
 
