@@ -4,5 +4,8 @@ persist.vendor.camera. u:object_r:vendor_camera_persist_prop:s0
 # Fingerprint
 persist.vendor.sys.fp. u:object_r:vendor_fingerprint_persist_prop:s0
 
+# RIL
+ro.vendor.oem.sno u:object_r:vendor_mtk_radio_prop:s0
+
 # Thermal
 vendor.sys.thermal. u:object_r:thermal_engine_prop:s0
