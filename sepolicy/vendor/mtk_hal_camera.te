@@ -5,5 +5,8 @@ allow mtk_hal_camera vendor_camera_data_file:dir create_dir_perms;
 allow mtk_hal_camera persist_data_file:dir search;
 allow mtk_hal_camera camera_persist_file:dir search;
 
+allow mtk_hal_camera sysfs_therm:dir search;
+allow mtk_hal_camera sysfs_therm:file rw_file_perms;
+
 get_prop(mtk_hal_camera, vendor_camera_prop)
 set_prop(mtk_hal_camera, vendor_camera_prop)
