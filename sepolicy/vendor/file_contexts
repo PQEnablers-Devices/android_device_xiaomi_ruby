@@ -18,6 +18,9 @@
 # Light
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
 
+# Power
+/dev/xiaomi-touch u:object_r:vendor_touchfeature_device:s0
+
 # Sensors
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.1-service\.ruby-multihal u:object_r:mtk_hal_sensors_exec:s0
 /dev/elliptic[0-1] u:object_r:sensor_device:s0
