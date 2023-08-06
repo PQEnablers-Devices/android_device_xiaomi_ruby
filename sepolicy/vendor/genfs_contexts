@@ -6,6 +6,7 @@ genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0/authen_fd 
 genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0/authen_fd/performance u:object_r:vendor_sysfs_fingerprint:s0
 
 # Extcon
+genfscon sysfs /devices/platform/extcon_usb/extcon/extcon0/cable.0/name u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/extcon_usb/extcon/extcon0/cable.1/name u:object_r:sysfs_extcon:s0
 
 # Health
