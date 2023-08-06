@@ -17,6 +17,7 @@ genfscon sysfs /devices/platform/11d00000.i2c5/i2c-5/5-0034/mt6360_pmu_chg.2.aut
 genfscon sysfs /devices/platform/11d01000.i2c7/i2c-7/7-0066/power_supply/cp_master                 u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0066/power_supply/cp_slave               u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0055/power_supply/bms                    u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0055/verify_digest                       u:object_r:sysfs_batteryinfo:s0
 
 # Wakeup (https://lkml.org/lkml/2019/8/6/1275)
 genfscon sysfs /devices/platform/10800000.adsp_core0/wakeup u:object_r:sysfs_wakeup:s0
