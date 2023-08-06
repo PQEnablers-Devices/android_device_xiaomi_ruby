@@ -6,6 +6,9 @@ persist.vendor.sys.fp. u:object_r:vendor_fingerprint_persist_prop:s0
 
 # RIL
 ro.vendor.oem.sno u:object_r:vendor_mtk_radio_prop:s0
+ro.vendor.oem.psno u:object_r:vendor_mtk_radio_prop:s0
+ro.vendor.oem.imei u:object_r:vendor_mtk_radio_prop:s0
+ro.vendor.oem.meid u:object_r:vendor_mtk_radio_prop:s0
 
 # Thermal
 vendor.sys.thermal. u:object_r:thermal_engine_prop:s0
