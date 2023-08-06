@@ -11,6 +11,7 @@ vendor/firmware/aw882xx_acf_m16.bin
 vendor/firmware/aw882xx_acf_m16u.bin
 vendor/lib/hw/audio.primary.mt6877.so
 vendor/lib/hw/audio.r_submix.mt6877.so
+vendor/lib/hw/sound_trigger.primary.default.so
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
@@ -43,7 +44,6 @@ vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libvoiprec.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
-vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libnotifyaudiohal.so
 
 # Audio Configs
