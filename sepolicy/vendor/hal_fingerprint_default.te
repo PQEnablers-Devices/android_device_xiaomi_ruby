@@ -1,1 +1,22 @@
+# Allow fingerprint HAL to setup fingerprint database files
+allow hal_fingerprint_default vendor_fingerprint_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default vendor_fingerprint_data_file:file create_file_perms;
+
+# Allow fingerprint HAL to read battery info
+allow hal_fingerprint_default sysfs_batteryinfo:dir { search };
+allow hal_fingerprint_default sysfs_batteryinfo:file r_file_perms;
+allow hal_fingerprint_default sysfs_pmu:dir { search };
+allow hal_fingerprint_default sysfs_pmu:file r_file_perms;
+
+# Create fingerprint HAL entrypoint
+allow hal_fingerprint_default hal_fingerprint_default_exec:file entrypoint;
+
+# Allow fingerprint HAL to get and set its props
+get_prop(hal_fingerprint_default, vendor_fingerprint_persist_prop)
+set_prop(hal_fingerprint_default, vendor_fingerprint_persist_prop)
+
+# Allow fingerprint HAL to create netlink_socket
+allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
+
+# Allow fingerprint HAL to register fingerprint interfaces
 add_hwservice(hal_fingerprint_default, vendor_hal_fingerprint_hwservice_xiaomi)
