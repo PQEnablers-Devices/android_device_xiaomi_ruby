@@ -6,3 +6,6 @@ binder_call(mtk_hal_sensors, hal_audio_default)
 
 # Allow mtk_hal_sensors to find hal_audio_hwservice
 allow mtk_hal_sensors hal_audio_hwservice:hwservice_manager find;
+
+# Allow mtk_hal_sensors to read/write to sensor device
+allow mtk_hal_sensors sensor_device:chr_file rw_file_perms;
