@@ -1,0 +1,243 @@
+{
+  "Nodes": [
+    {
+      "Name": "CPULittleClusterMaxFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq",
+      "Values": [
+        "9999999",
+        "2000000",
+        "1903000",
+        "1800000",
+        "1703000",
+        "1600000",
+        "1503000",
+        "1407000",
+        "1310000",
+        "1260000",
+        "1150000",
+        "1053000",
+        "980000",
+        "900000",
+        "740000",
+        "650000",
+        "500000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPULittleClusterMinFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
+      "Values": [
+        "2000000",
+        "1903000",
+        "1800000",
+        "1703000",
+        "1600000",
+        "1503000",
+        "1407000",
+        "1310000",
+        "1260000",
+        "1150000",
+        "1053000",
+        "980000",
+        "900000",
+        "740000",
+        "650000",
+        "500000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigClusterMaxFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq",
+      "Values": [
+        "9999999",
+        "2600000",
+        "2400000",
+        "2275000",
+        "2150000",
+        "2000000",
+        "1900000",
+        "1800000",
+        "1660000",
+        "1540000",
+        "1430000",
+        "1300000",
+        "1140000",
+        "1040000",
+        "910000",
+        "740000",
+        "650000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigClusterMinFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq",
+      "Values": [
+        "2600000",
+        "2400000",
+        "2275000",
+        "2150000",
+        "2000000",
+        "1900000",
+        "1800000",
+        "1660000",
+        "1540000",
+        "1430000",
+        "1300000",
+        "1140000",
+        "1040000",
+        "910000",
+        "740000",
+        "650000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMin",
+      "Path": "/dev/stune/top-app/schedtune.uclamp.min",
+      "Values": [
+        "100",
+        "40",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CDSchedtuneBoost",
+      "Path": "/dev/stune/camera-daemon/schedtune.boost",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CDUclampMin",
+      "Path": "/dev/stune/camera-daemon/schedtune.uclamp.min",
+      "Values": [
+        "100",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "DRAMOppMin",
+      "Path": "/proc/perfmgr/boost_ctrl/dram_ctrl/ddr",
+      "Values": [
+        "1",
+        "-1"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "PowerHALAudioState",
+      "Path": "vendor.powerhal.audio",
+      "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
+      "Type": "Property"
+    }
+  ],
+  "Actions": [
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "PowerHALAudioState",
+      "Duration": 0,
+      "Value": "AUDIO_STREAMING_LOW_LATENCY"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "900000"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "910000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1053000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1300000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "TAUclampMin",
+      "Duration": 0,
+      "Value": "40"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 5000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 5000,
+      "Value": "2000000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 5000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 5000,
+      "Value": "2000000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMin",
+      "Duration": 5000,
+      "Value": "100"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "DRAMOppMin",
+      "Duration": 5000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "CDSchedtuneBoost",
+      "Duration": 1000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "CDUclampMin",
+      "Duration": 1000,
+      "Value": "100"
+    }
+  ]
+}
