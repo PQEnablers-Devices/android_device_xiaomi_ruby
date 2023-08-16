@@ -322,12 +322,12 @@ PRODUCT_PACKAGES += \
     fstab.mt6877 \
     fstab.mt6877.ramdisk \
     init.batterysecret.rc \
-    init.cgroup.rc \
     init.connectivity.rc \
     init.fingerprint.rc \
     init.mi_thermald.rc \
     init.modem.rc \
     init.mt6877.rc \
+    init.mt6877.power.rc \
     init.mt6877.usb.rc \
     init.project.rc \
     init.sensor_2_0.rc \

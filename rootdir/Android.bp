@@ -19,8 +19,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.cgroup.rc",
-    src: "etc/init.cgroup.rc",
+    name: "init.mt6877.power.rc",
+    src: "etc/init.mt6877.power.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
