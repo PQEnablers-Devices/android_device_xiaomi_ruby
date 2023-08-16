@@ -1174,6 +1174,7 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Camera Configs
 vendor/etc/camera/model/dof_model/capture_cache
@@ -1582,7 +1583,6 @@ lib64/libimsma_rtp.so
 lib64/libimsma_socketwrapper.so
 lib64/libmtk_vt_service.so
 lib64/libmtk_vt_wrapper.so
-lib64/libmtkperf_client.so
 lib64/libsignal.so
 lib64/libsink.so
 lib64/libsource.so
@@ -1911,19 +1911,6 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.3.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
-
-# Perf
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
-vendor/lib/libmtkperf_client_vendor.so
-vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
-vendor/lib64/libmtkperf_client_vendor.so
-vendor/lib64/libperfctl_vendor.so
-vendor/lib64/libpower_timer.so
-vendor/lib64/libpowerhal.so
-vendor/lib64/libpowerhalwrap_vendor.so
-vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Radio
 vendor/bin/hw/mtkfusionrild
