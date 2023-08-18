@@ -1,2 +1,0 @@
-allow mtk_hal_power vendor_touchfeature_device:chr_file rw_file_perms;
-allow mtk_hal_power sysfs_therm:file w_file_perms;
