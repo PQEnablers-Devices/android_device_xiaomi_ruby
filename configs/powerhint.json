@@ -99,6 +99,130 @@
       "ResetOnInit": true
     },
     {
+      "Name": "GPUMinFreq",
+      "Path": "/sys/kernel/gpu/gpu_min_clock",
+      "Values": [
+        "950000",
+        "938000",
+        "926000",
+        "914000",
+        "902000",
+        "890000",
+        "876000",
+        "862000",
+        "848000",
+        "835000",
+        "821000",
+        "807000",
+        "793000",
+        "780000",
+        "766000",
+        "752000",
+        "738000",
+        "725000",
+        "711000",
+        "697000",
+        "683000",
+        "670000",
+        "652000",
+        "634000",
+        "616000",
+        "598000",
+        "580000",
+        "563000",
+        "545000",
+        "527000",
+        "509000",
+        "491000",
+        "474000",
+        "456000",
+        "438000",
+        "420000",
+        "402000",
+        "385000"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUMaxFreq",
+      "Path": "/sys/kernel/gpu/gpu_max_clock",
+      "Values": [
+        "950000",
+        "938000",
+        "926000",
+        "914000",
+        "902000",
+        "890000",
+        "876000",
+        "862000",
+        "848000",
+        "835000",
+        "821000",
+        "807000",
+        "793000",
+        "780000",
+        "766000",
+        "752000",
+        "738000",
+        "725000",
+        "711000",
+        "697000",
+        "683000",
+        "670000",
+        "652000",
+        "634000",
+        "616000",
+        "598000",
+        "580000",
+        "563000",
+        "545000",
+        "527000",
+        "509000",
+        "491000",
+        "474000",
+        "456000",
+        "438000",
+        "420000",
+        "402000",
+        "385000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUSchedMode",
+      "Path": "/sys/devices/platform/13000000.mali/js_ctx_scheduling_mode",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUSchedPeriod",
+      "Path": "/sys/devices/platform/13000000.mali/js_scheduling_period",
+      "Values": [
+        "100",
+        "75",
+        "50",
+        "0"
+      ],
+      "ResetOnInit": true,
+      "DefaultIndex": 0
+    },
+    {
+      "Name": "GPUDVFSInterval",
+      "Path": "/sys/devices/platform/13000000.mali/dvfs_period",
+      "Values": [
+        "100",
+        "75",
+        "50"
+      ],
+      "ResetOnInit": true,
+      "DefaultIndex": 0
+    },
+    {
       "Name": "TAUclampMin",
       "Path": "/dev/stune/top-app/schedtune.uclamp.min",
       "Values": [
@@ -139,6 +263,12 @@
       "Name": "PowerHALAudioState",
       "Path": "vendor.powerhal.audio",
       "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
+      "Type": "Property"
+    },
+    {
+      "Name": "PowerHALRenderingState",
+      "Path": "vendor.powerhal.rendering",
+      "Values": ["EXPENSIVE_RENDERING", ""],
       "Type": "Property"
     }
   ],
@@ -238,6 +368,42 @@
       "Node": "CDUclampMin",
       "Duration": 1000,
       "Value": "100"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "PowerHALRenderingState",
+      "Duration": 0,
+      "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "616000"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUMaxFreq",
+      "Duration": 0,
+      "Value": "950000"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUSchedPeriod",
+      "Duration": 0,
+      "Value": "100"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUDVFSInterval",
+      "Duration": 0,
+      "Value": "75"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUSchedMode",
+      "Duration": 0,
+      "Value": "1"
     }
   ]
 }
