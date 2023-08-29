@@ -58,9 +58,6 @@ on charger
     chown system system /sys/class/leds/green/brightness
 
     start vendor.light-default
-    # switch to sched-dvfs
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
 
 on fs
     start vendor.boot-hal-1-2
