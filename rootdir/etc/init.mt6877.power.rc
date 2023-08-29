@@ -11,25 +11,6 @@ on property:init.svc.vendor.charger=running
     write /sys/devices/system/cpu/cpu7/online 0
 
 on init
-    # Disable UFS powersaving
-    write /sys/devices/platform/11270000.ufshci/clkgate_enable 0
-
-    # Boot time FS tuning
-    write /sys/block/mmcblk0/queue/iostats 0
-    write /sys/block/mmcblk0/queue/nr_requests 256
-    write /sys/block/sdc/queue/iostats 0
-    write /sys/block/sdc/queue/nr_requests 256
-
-    # Configure governor settings for little cluster
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
-
-    # Configure governor settings for big cluster
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
-    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us 20000
-
     # Create energy-aware scheduler tuning nodes
     mkdir /dev/stune/foreground
     mkdir /dev/stune/background
@@ -71,6 +52,25 @@ on init
     chown system system /dev/stune/io
     chown system system /dev/stune/io/tasks
     chmod 0666 /dev/stune/io/tasks
+
+    # Disable UFS powersaving
+    write /sys/devices/platform/11270000.ufshci/clkgate_enable 0
+
+    # Boot time FS tuning
+    write /sys/block/mmcblk0/queue/iostats 0
+    write /sys/block/mmcblk0/queue/nr_requests 256
+    write /sys/block/sdc/queue/iostats 0
+    write /sys/block/sdc/queue/nr_requests 256
+
+    # Configure governor settings for little cluster
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
+
+    # Configure governor settings for big cluster
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us 20000
 
     # update cpus for cpuset cgroup
     write /dev/cpuset/foreground/cpus 0-2,4-7
