@@ -43,8 +43,6 @@ on charger
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1 -1 -1"
     write /sys/devices/platform/boot_dramboost/dramboost/dramboost 0
 
-    exec /system/bin/e2fsck -f -p /dev/block/by-name/cache
-    mount ext4 /dev/block/by-name/cache /cache rw wait
     chmod 0660 /dev/spm
     chown system system /dev/spm
     start spm_script
@@ -69,11 +67,6 @@ on charger
     chmod 0660 /sys/power/wakeup_count
     write /sys/power/pm_freeze_timeout 2000
 
-    chown system system /sys/class/leds/lcd-backlight/brightness
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/green/brightness
-
-    start vendor.light-default
     # switch to sched-dvfs
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
@@ -958,7 +951,10 @@ service osi /system/bin/osi
 
 service charger /system/bin/charger
     class charger
-    critical
-    #seclabel u:r:charger:s0
-    group system graphics
-    seclabel u:r:healthd:s0
+    user system
+    group system graphics wakelock input
+    capabilities SYS_BOOT
+    file /dev/kmsg w
+    file /sys/fs/pstore/console-ramoops-0 r
+    file /sys/fs/pstore/console-ramoops r
+    file /proc/last_kmsg r
