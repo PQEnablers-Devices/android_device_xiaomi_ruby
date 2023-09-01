@@ -1186,8 +1186,8 @@ vendor/etc/camera/model/rt_model/preview_policy
 vendor/etc/camera/LDC_packdata_xiaomi_v1.dat
 vendor/etc/camera/LDC_packdata_xiaomi_v2.dat
 vendor/etc/camera/aivsModels1
-vendor/etc/camera/aivsParams2
 vendor/etc/camera/aivsParams
+vendor/etc/camera/aivsParams2
 vendor/etc/camera/com.xiaomi.dcal.wu.golden
 vendor/etc/camera/com.xiaomi.dcal.wu2.golden
 vendor/etc/camera/dof_mecp.bin
@@ -1200,8 +1200,8 @@ vendor/etc/camera/quantize_mtk_0.00246_1800-360620_singleinput_mdla20.dla
 vendor/etc/camera/sceneDetection.xml
 vendor/etc/camera/sceneDetection_india.xml
 vendor/etc/camera/skyseg_384_without_softmax_mdla20_vpu.dla
-vendor/etc/camera/vidhance_calibration_ofilm
 vendor/etc/camera/vidhance_calibration
+vendor/etc/camera/vidhance_calibration_ofilm
 
 # Connectivity
 vendor/bin/conninfra_loader
