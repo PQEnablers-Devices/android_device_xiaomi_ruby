@@ -229,6 +229,7 @@ PRODUCT_PACKAGES += \
     SettingsOverlayRuby \
     SystemUIOverlayRuby \
     TelephonyOverlayRuby \
+    TetheringResOverlayRuby \
     WifiResOverlayRuby
 
 DEVICE_PACKAGE_OVERLAYS += \
