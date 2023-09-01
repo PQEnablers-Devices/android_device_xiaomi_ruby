@@ -2013,6 +2013,15 @@ vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/libsensor_custom.so
 
+# Sensors (citsensor)
+vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice@1.1-service
+vendor/etc/init/vendor.xiaomi.sensor.citsensorservice@1.1-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@1.1-service.xml
+vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so
+vendor/lib64/libhfmanagerwrapper.so
+vendor/lib64/libssccalapi.so
+vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
+
 # USB
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
