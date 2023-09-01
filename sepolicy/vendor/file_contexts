@@ -30,6 +30,7 @@
 
 # Sensors
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.1-service\.ruby-multihal u:object_r:mtk_hal_sensors_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.sensor\.citsensorservice@1\.1-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 /dev/elliptic[0-1] u:object_r:sensor_device:s0
 
 # Thermal

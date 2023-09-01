@@ -7,3 +7,7 @@ com.fingerprints.extension::IFingerprintNavigation                              
 com.fingerprints.extension::IFingerprintSensorTest                                   u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 com.fingerprints.extension::IFingerprintCalibration                                  u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 com.fingerprints.extension::IFingerprintOptical                                      u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
+
+# Sensors
+vendor.xiaomi.hardware.citsensorservice::ICitSensorService                    u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
+vendor.xiaomi.sensor.citsensorservice::ICitSensorService                    u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0

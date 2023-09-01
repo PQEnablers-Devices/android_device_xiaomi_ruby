@@ -1,5 +1,6 @@
 # Display
 genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/panel_info                      u:object_r:vendor_sysfs_display:s0
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/dynamic_fps                     u:object_r:vendor_sysfs_display:s0
 
 # Fingerprint
 genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0/authen_fd u:object_r:vendor_sysfs_fingerprint:s0
