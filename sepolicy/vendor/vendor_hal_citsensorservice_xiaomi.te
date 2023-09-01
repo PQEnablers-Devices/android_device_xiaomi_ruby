@@ -15,6 +15,11 @@ allow vendor_hal_citsensorservice_xiaomi_default fwk_sensor_hwservice:hwservice_
 allow vendor_hal_citsensorservice_xiaomi_default system_server:binder call;
 
 r_dir_file(vendor_hal_citsensorservice_xiaomi_default, vendor_sysfs_display)
+r_dir_file(vendor_hal_citsensorservice_xiaomi_default, sysfs_leds)
 
 allow vendor_hal_citsensorservice_xiaomi_default input_device:dir r_dir_perms;
 allow vendor_hal_citsensorservice_xiaomi_default input_device:chr_file rw_file_perms;
+
+allow vendor_hal_citsensorservice_xiaomi_default hf_manager_device:chr_file rw_file_perms;
+
+set_prop(vendor_hal_citsensorservice_xiaomi_default, vendor_citsensorservice_prop)
