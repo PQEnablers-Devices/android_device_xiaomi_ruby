@@ -1,4 +1,4 @@
-vendor_public_prop(vendor_thermal_engine_prop)
+vendor_internal_prop(vendor_thermal_engine_prop)
 vendor_internal_prop(vendor_camera_prop)
 vendor_internal_prop(vendor_fingerprint_persist_prop)
 vendor_internal_prop(vendor_batterysecret_prop)
