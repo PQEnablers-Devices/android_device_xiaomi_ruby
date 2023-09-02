@@ -18,4 +18,4 @@ ro.vendor.oem.meid u:object_r:vendor_mtk_radio_prop:s0
 persist.vendor.trigger.cct u:object_r:vendor_citsensorservice_prop:s0
 
 # Thermal
-vendor.sys.thermal. u:object_r:thermal_engine_prop:s0
+vendor.sys.thermal. u:object_r:vendor_thermal_engine_prop:s0
