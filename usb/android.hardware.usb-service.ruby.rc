@@ -1,3 +1,11 @@
+on boot
+    chown root system /sys/class/typec/port0/power_role
+    chown root system /sys/class/typec/port0/data_role
+    chown root system /sys/class/typec/port0/port_type
+    chmod 664 /sys/class/typec/port0/power_role
+    chmod 664 /sys/class/typec/port0/data_role
+    chmod 664 /sys/class/typec/port0/port_type
+
 service vendor.usb_default /vendor/bin/hw/android.hardware.usb-service.ruby
     class hal
     user system
