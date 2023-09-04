@@ -43,6 +43,8 @@ using ::ndk::ScopedAStatus;
 using ::std::shared_ptr;
 using ::std::string;
 
+#define PULLUP_PATH "/config/usb_gadget/g1/UDC"
+
 struct Usb : public BnUsb {
     Usb();
 
@@ -72,6 +74,8 @@ struct Usb : public BnUsb {
     pthread_mutex_t mPartnerLock;
     // Variable to signal partner coming back online after type switch
     bool mPartnerUp;
+    // Usb Data status
+    bool mUsbDataEnabled;
   private:
     pthread_t mPoll;
 };

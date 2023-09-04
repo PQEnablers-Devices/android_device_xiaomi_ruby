@@ -20,6 +20,7 @@
 #include <android-base/logging.h>
 #include <android-base/properties.h>
 #include <android-base/strings.h>
+#include <android-base/stringprintf.h>
 #include <assert.h>
 #include <dirent.h>
 #include <pthread.h>
@@ -39,6 +40,7 @@
 #include "Usb.h"
 
 using android::base::GetProperty;
+using android::base::StringPrintf;
 using android::base::Trim;
 
 namespace aidl {
@@ -49,6 +51,9 @@ namespace usb {
 constexpr char kTypecPath[] = "/sys/class/typec/";
 constexpr char kDataRoleNode[] = "/data_role";
 constexpr char kPowerRoleNode[] = "/power_role";
+constexpr char kUsbDataPath[] = "/sys/class/udc/%s/device/usb_data_enabled";
+
+const std::string kUsbControllerName = GetProperty("sys.usb.controller", "");
 
 // Set by the signal handler to destroy the thread
 volatile bool destroyThread;
@@ -58,11 +63,60 @@ void queryVersionHelper(android::hardware::usb::Usb *usb,
 
 ScopedAStatus Usb::enableUsbData(const string& in_portName, bool in_enable, int64_t in_transactionId) {
     std::vector<PortStatus> currentPortStatus;
+    string filename, pullup;
+    bool result = true;
 
+    ALOGI("Userspace turn %s USB data signaling. opID:%ld", in_enable ? "on" : "off",
+            in_transactionId);
+
+    if (kUsbControllerName.empty()) {
+        ALOGE("sys.usb.controller is empty!");
+        result = false;
+        goto out;
+    }
+
+    filename = StringPrintf(kUsbDataPath, kUsbControllerName.c_str());
+
+    if (in_enable) {
+        if (!mUsbDataEnabled) {
+            if (ReadFileToString(PULLUP_PATH, &pullup)) {
+                pullup = Trim(pullup);
+                if (pullup != kUsbControllerName) {
+                    if (!WriteStringToFile(kUsbControllerName, PULLUP_PATH)) {
+                        ALOGE("Gadget cannot be pulled up");
+                        result = false;
+                    }
+                }
+            }
+            if (!WriteStringToFile("1", filename)) {
+                ALOGE("Not able to turn on usb connection notification");
+                result = false;
+            }
+        }
+    } else {
+        if (ReadFileToString(PULLUP_PATH, &pullup)) {
+            pullup = Trim(pullup);
+            if (pullup == kUsbControllerName) {
+                if (!WriteStringToFile("none", PULLUP_PATH)) {
+                    ALOGE("Gadget cannot be pulled down");
+                    result = false;
+                }
+            }
+        }
+        if (!WriteStringToFile("0", filename)) {
+            ALOGE("Not able to turn on usb connection notification");
+            result = false;
+        }
+    }
+
+out:
+    if (result) {
+        mUsbDataEnabled = in_enable;
+    }
     pthread_mutex_lock(&mLock);
     if (mCallback != NULL) {
         ScopedAStatus ret = mCallback->notifyEnableUsbDataStatus(
-            in_portName, true, in_enable ? Status::SUCCESS : Status::ERROR, in_transactionId);
+            in_portName, in_enable, result ? Status::SUCCESS : Status::ERROR, in_transactionId);
         if (!ret.isOk())
             ALOGE("notifyEnableUsbDataStatus error %s", ret.getDescription().c_str());
     } else {
@@ -245,7 +299,8 @@ Usb::Usb()
     : mLock(PTHREAD_MUTEX_INITIALIZER),
       mRoleSwitchLock(PTHREAD_MUTEX_INITIALIZER),
       mPartnerLock(PTHREAD_MUTEX_INITIALIZER),
-      mPartnerUp(false)
+      mPartnerUp(false),
+      mUsbDataEnabled(true)
 {
     pthread_condattr_t attr;
     if (pthread_condattr_init(&attr)) {
@@ -466,7 +521,8 @@ bool canSwitchRoleHelper(const string &portName) {
     return false;
 }
 
-Status getPortStatusHelper(std::vector<PortStatus> *currentPortStatus) {
+Status getPortStatusHelper(android::hardware::usb::Usb *usb,
+        std::vector<PortStatus> *currentPortStatus) {
     std::unordered_map<string, bool> names;
     Status result = getTypeCPortNamesHelper(&names);
     int i = -1;
@@ -510,14 +566,16 @@ Status getPortStatusHelper(std::vector<PortStatus> *currentPortStatus) {
                 port.second ? canSwitchRoleHelper(port.first) : false;
 
             (*currentPortStatus)[i].supportedModes.push_back(PortMode::DRP);
-            (*currentPortStatus)[i].usbDataStatus.push_back(UsbDataStatus::ENABLED);
+            (*currentPortStatus)[i].usbDataStatus.push_back(
+                usb->mUsbDataEnabled ? UsbDataStatus::ENABLED : UsbDataStatus::DISABLED_FORCE);
 
             ALOGI("%d:%s connected:%d canChangeMode:%d canChagedata:%d canChangePower:%d "
                 "usbDataEnabled:%d",
                 i, port.first.c_str(), port.second,
                 (*currentPortStatus)[i].canChangeMode,
                 (*currentPortStatus)[i].canChangeDataRole,
-                (*currentPortStatus)[i].canChangePowerRole, 0);
+                (*currentPortStatus)[i].canChangePowerRole,
+                usb->mUsbDataEnabled);
         }
 
         return Status::SUCCESS;
@@ -530,7 +588,7 @@ void queryVersionHelper(android::hardware::usb::Usb *usb,
                         std::vector<PortStatus> *currentPortStatus) {
     Status status;
     pthread_mutex_lock(&usb->mLock);
-    status = getPortStatusHelper(currentPortStatus);
+    status = getPortStatusHelper(usb, currentPortStatus);
     queryMoistureDetectionStatus(currentPortStatus);
     if (usb->mCallback != NULL) {
         ScopedAStatus ret = usb->mCallback->notifyPortStatusChange(*currentPortStatus,
