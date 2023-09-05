@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
-    android.hardware.bluetooth.audio@2.1-impl
+    android.hardware.bluetooth.audio-impl
 
 PRODUCT_PACKAGES += \
     MtkInCallService
