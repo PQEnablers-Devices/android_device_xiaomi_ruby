@@ -17,7 +17,9 @@ genfscon sysfs /devices/platform/battery/power_supply/battery                   
 genfscon sysfs /devices/platform/mt_charger/power_supply/usb                                       u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/11d00000.i2c5/i2c-5/5-0034/mt6360_pmu_chg.2.auto/power_supply/bbc u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/11d01000.i2c7/i2c-7/7-0066/power_supply/cp_master                 u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11d01000.i2c7/i2c-7/7-0064/power_supply/cp_master                 u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0066/power_supply/cp_slave               u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0075/power_supply/cp_slave               u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0055/power_supply/bms                    u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0055/verify_digest                       u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/pd_adapter/Charging_Adapter/pd_adapter                            u:object_r:sysfs_batteryinfo:s0
@@ -28,9 +30,11 @@ genfscon sysfs /devices/platform/10800000.adsp_core0/wakeup u:object_r:sysfs_wak
 genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0/goodix_fp/goodix_fp/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0055/power_supply/bms/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0066/power_supply/cp_slave/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11281000.i2c11/i2c-11/11-0075/power_supply/cp_slave/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11d00000.i2c5/i2c-5/5-0034/mt6360_pmu_chg.2.auto/power_supply/bbc/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11d00000.i2c5/i2c-5/5-004e/tcpc/type_c_port0/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11d00000.i2c5/i2c-5/5-004e/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11d01000.i2c7/i2c-7/7-0064/power_supply/cp_master/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11d01000.i2c7/i2c-7/7-0066/power_supply/cp_master/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11e00000.i2c0/i2c-0/0-005a/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/14013000.dsi/wakeup u:object_r:sysfs_wakeup:s0
