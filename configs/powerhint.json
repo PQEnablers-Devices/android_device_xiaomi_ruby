@@ -223,6 +223,24 @@
       "DefaultIndex": 0
     },
     {
+      "Name": "FGSchedtuneBoost",
+      "Path": "/dev/stune/foreground/schedtune.boost",
+      "Values": [
+        "100",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "FGUclampMin",
+      "Path": "/dev/stune/foreground/schedtune.uclamp.min",
+      "Values": [
+        "100",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "TAUclampMin",
       "Path": "/dev/stune/top-app/schedtune.uclamp.min",
       "Values": [
@@ -344,6 +362,18 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 5000,
       "Value": "2000000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "FGSchedtuneBoost",
+      "Duration": 5000,
+      "Value": "100"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "FGUclampMin",
+      "Duration": 5000,
+      "Value": "100"
     },
     {
       "PowerHint": "LAUNCH",
