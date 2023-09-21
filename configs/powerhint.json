@@ -217,15 +217,6 @@
       "DefaultIndex": 0
     },
     {
-      "Name": "FGSchedtuneBoost",
-      "Path": "/dev/stune/foreground/schedtune.boost",
-      "Values": [
-        "100",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "FGUclampMin",
       "Path": "/dev/stune/foreground/schedtune.uclamp.min",
       "Values": [
@@ -240,15 +231,6 @@
       "Values": [
         "100",
         "40",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CDSchedtuneBoost",
-      "Path": "/dev/stune/camera-daemon/schedtune.boost",
-      "Values": [
-        "1",
         "0"
       ],
       "ResetOnInit": true
@@ -359,12 +341,6 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "FGSchedtuneBoost",
-      "Duration": 5000,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "LAUNCH",
       "Node": "FGUclampMin",
       "Duration": 5000,
       "Value": "100"
@@ -379,12 +355,6 @@
       "PowerHint": "LAUNCH",
       "Node": "DRAMOppMin",
       "Duration": 5000,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "CDSchedtuneBoost",
-      "Duration": 1000,
       "Value": "1"
     },
     {
