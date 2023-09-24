@@ -43,6 +43,11 @@ vendor/lib/librt_extamp_intf.so
 vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libvoiprec.so
+vendor/lib/libvow_ap_test_aa.so
+vendor/lib/libvow_ap_test_dd.so
+vendor/lib/libvow_ap_test_ha.so
+vendor/lib/libvow_ap_test_hh.so
+vendor/lib/libvow_ap_test_nn.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/libnotifyaudiohal.so
 
