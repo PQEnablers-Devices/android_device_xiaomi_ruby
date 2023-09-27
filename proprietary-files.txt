@@ -1380,6 +1380,10 @@ vendor/lib64/libstagefrightdolby.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
+# Dolby (daxService) - from bora2g-user 12 SOWS32.121-40-2 30355 release-keys
+system_ext/etc/permissions/com.dolby.daxservice.xml|cdd700ce16303ff2baa41eac44ed779f545db418
+-system_ext/priv-app/daxService/daxService.apk|8088437e7a171e9a81e72a2122fb1d5e1505cd2c
+
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
