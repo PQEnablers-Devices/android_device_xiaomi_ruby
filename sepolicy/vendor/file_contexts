@@ -50,6 +50,10 @@
 # Display
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
 
+# Dolby
+/data/vendor/dolby(/.*)?                                                  u:object_r:vendor_dolby_file:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service  u:object_r:hal_dms_default_exec:s0
+
 # Fingerprint
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2.3-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
 /mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
