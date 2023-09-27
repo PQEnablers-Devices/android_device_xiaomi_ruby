@@ -147,6 +147,11 @@ ro.vendor.smvr.p2batch.fhd=4
 ro.vendor.smvr.p2batch.hd=8
 ro.vendor.smvr.p2batch.vga=16
 
+# Dolby
+ro.vendor.audio.device.dbcom=dolby_common
+ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
+ro.vendor.audio.dolby.dax.support=true
+
 # DRM
 ro.netflix.bsp_rev=MTK6877-33678-1
 
