@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ruby.mk
+    $(LOCAL_DIR)/aosp_ruby.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_ruby-user \
-    lineage_ruby-userdebug \
-    lineage_ruby-eng
+    aosp_ruby-user \
+    aosp_ruby-userdebug \
+    aosp_ruby-eng
