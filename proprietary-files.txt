@@ -1666,12 +1666,14 @@ vendor/thh/ta/isee_model.json
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml
+vendor/lib/libOpenCL.so
 vendor/lib64/mt6877/libneuron_platform.vpu.so:vendor/lib64/libneuron_platform.vpu.so
 vendor/lib64/mt6877/libneuron_runtime.5.so:vendor/lib64/libneuron_runtime.5.so
 vendor/lib64/mt6877/libneuron_runtime.so:vendor/lib64/libneuron_runtime.so
 vendor/lib64/APUWareApusysServer.so
 vendor/lib64/APUWareUtilsServer.so
 vendor/lib64/APUWareXrpServer_v2.so
+vendor/lib64/libOpenCL.so
 vendor/lib64/libapu_mdw.so
 vendor/lib64/libapu_mdw_batch.so
 vendor/lib64/libapusys.so
