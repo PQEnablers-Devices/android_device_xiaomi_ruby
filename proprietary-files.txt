@@ -1693,10 +1693,7 @@ vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 vendor/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
 
 # NFC
-vendor/bin/hw/android.hardware.nfc@1.2-service-st
-vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
-vendor/lib64/nfc_nci.st21nfc.st.so
 
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
