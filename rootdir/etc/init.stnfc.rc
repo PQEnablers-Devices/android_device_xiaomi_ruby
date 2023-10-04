@@ -1,13 +1,16 @@
-service nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service-st
+service nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.st
     class hal
     user nfc
     group nfc
+    override
     disabled
 
 on early-init && property:ro.boot.hwc=CN
+    setprop persist.vendor.nfc.config_file_name /vendor/etc/st21nfc_conf_${ro.boot.product.hardware.sku}.conf
     setprop ro.boot.product.vendor.sku nfc
     enable nfc_hal_service
 
 on early-init && property:ro.boot.hwc=GL
+    setprop persist.vendor.nfc.config_file_name /vendor/etc/st21nfc_conf_${ro.boot.product.hardware.sku}_gl.conf
     setprop ro.boot.product.vendor.sku nfc
     enable nfc_hal_service
