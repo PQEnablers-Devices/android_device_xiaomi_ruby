@@ -1427,7 +1427,7 @@ etc/init/init.vtservice.rc
 -framework/mediatek-ims-common.jar
 -framework/mediatek-ims-extension-plugin.jar
 -framework/mediatek-telecom-common.jar
--framework/mediatek-telephony-base.jar
+-framework/mediatek-telephony-base.jar|3e80169c59c6140ce7a9804c727a16b648d499bf
 -framework/mediatek-telephony-common.jar
 -framework/mediatek-wfo-legacy.jar
 lib64/libcomutils.so
@@ -1445,7 +1445,7 @@ lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
 lib64/libvsim-adaptor-client.so
 lib64/libvt_avsync.so
--priv-app/ImsService/ImsService.apk
+-priv-app/ImsService/ImsService.apk|c01c9085d48f32cf4634bc0be959e74bcef1949b
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
