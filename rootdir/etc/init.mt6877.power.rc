@@ -107,6 +107,11 @@ on enable-low-power
     write /proc/cpufreq/cpufreq_sched_disable 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
+    # Configure DVFS
+    write /sys/kernel/ged/hal/dvfs_margin_value 130
+    write /sys/kernel/ged/hal/timer_base_dvfs_margin 798
+    write /sys/kernel/ged/hal/loading_base_dvfs_step 4
+
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
