@@ -903,7 +903,7 @@ service osi /system/bin/osi
     oneshot
     #seclabel u:r:osi:s0
 
-service charger /system/bin/charger
+service vendor.charger /system/bin/charger
     class charger
     user system
     group system graphics wakelock input
