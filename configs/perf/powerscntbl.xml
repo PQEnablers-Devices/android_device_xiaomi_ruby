@@ -14,4 +14,25 @@
         <data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_EAS_BOOST" param1="50"></data>
         <data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_NOTIFY_TOUCH_EVENT" param1="1"></data>
     </scenario>
+    <scenario powerhint="MTKPOWER_HINT_AUDIO_POWER_DL">
+        <data cmd="PERF_RES_CPUFREQ_MIN_CLUSTER_0" param1="800000"></data>
+        <data cmd="PERF_RES_POWERHAL_SCREEN_OFF_STATE" param1="1"></data>
+    </scenario>
+    <scenario powerhint="MTKPOWER_HINT_AUDIO_POWER_SPK">
+        <data cmd="PERF_RES_CPUFREQ_MIN_CLUSTER_0" param1="1200000"></data>
+        <data cmd="PERF_RES_POWERHAL_SCREEN_OFF_STATE" param1="1"></data>
+    </scenario>
+    <scenario powerhint="MTKPOWER_HINT_AUDIO_POWER_HEADPHONE">
+        <data cmd="PERF_RES_CPUFREQ_MIN_CLUSTER_0" param1="1200000"></data>
+        <data cmd="PERF_RES_POWERHAL_SCREEN_OFF_STATE" param1="1"></data>
+    </scenario>
+    <scenario powerhint="MTKPOWER_HINT_AUDIO_POWER_USB_AUDIO">
+        <data cmd="PERF_RES_CPUFREQ_MIN_CLUSTER_0" param1="1200000"></data>
+        <data cmd="PERF_RES_POWERHAL_SCREEN_OFF_STATE" param1="1"></data>
+    </scenario>
+    <scenario powerhint="MTKPOWER_HINT_AUDIO_LATENCY_UL">
+        <data cmd="PERF_RES_CPUFREQ_MIN_CLUSTER_0" param1="1500000"></data>
+        <data cmd="PERF_RES_CPUFREQ_MIN_CLUSTER_1" param1="1000000"></data>
+        <data cmd="PERF_RES_POWERHAL_SCREEN_OFF_STATE" param1="1"></data>
+    </scenario>
 </SCNTABLE>
