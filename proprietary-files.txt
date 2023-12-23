@@ -1,4 +1,4 @@
-# Unpinned blobs from ruby-user 13 TP1A.220624.014 V14.0.1.0.TMOMIXM release-keys
+# Unpinned blobs from ruby-user 13 TP1A.220624.014 V14.0.5.0.TMOMIXM release-keys
 
 # AEE
 vendor/lib/libaedv.so
@@ -317,8 +317,8 @@ vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
-# Bluetooth (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU3AWF1 release-keys
-vendor/firmware/soc5_0_ram_bt_1_1_hdr.bin|da82964b87491348caf2e7ebf761cdec7cb8066e
+# Bluetooth (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU4AWG7 release-keys
+vendor/firmware/soc5_0_ram_bt_1_1_hdr.bin|25eae2d07aa48c6e928f2e7cf12da3f5f7b19c65
 
 # Camera
 vendor/bin/hw/camerahalserver
@@ -329,7 +329,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
-vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
 vendor/lib64/imx766ofilm2_mipi_raw_IdxMgr.so
 vendor/lib64/imx766ofilm2_mipi_raw_tuning.so
 vendor/lib64/imx766ofilm_mipi_raw_IdxMgr.so
@@ -1153,6 +1152,7 @@ vendor/lib64/libvidhance.so
 vendor/lib64/libvidhance_active_ois.so
 vendor/lib64/libvidhance_ldc.so
 vendor/lib64/libvidhance_stabilizer.so
+vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
 vendor/lib64/ov02b10aac_mipi_raw_IdxMgr.so
 vendor/lib64/ov02b10aac_mipi_raw_tuning.so
 vendor/lib64/ov02b10sunny_mipi_raw_IdxMgr.so
@@ -1178,6 +1178,20 @@ vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
+vendor/xiaomi/ruby/proprietary/system/lib/libcamera_ispinterface_jni.xiaomi.so
+vendor/xiaomi/ruby/proprietary/system/lib/libhidltransport.so
+vendor/xiaomi/ruby/proprietary/system/lib/libmtkisp_metadata_sys.so
+vendor/xiaomi/ruby/proprietary/system/lib/libui.so
+vendor/xiaomi/ruby/proprietary/system/lib/vendor.mediatek.hardware.camera.isphal@1.0.so
+vendor/xiaomi/ruby/proprietary/system/lib64/libcamera_ispinterface_jni.xiaomi.so
+vendor/xiaomi/ruby/proprietary/system/lib64/libhidltransport.so
+vendor/xiaomi/ruby/proprietary/system/lib64/libmtkisp_metadata_sys.so
+vendor/xiaomi/ruby/proprietary/system/lib64/libui.so
+vendor/xiaomi/ruby/proprietary/system/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
+vendor/xiaomi/ruby/proprietary/vendor/lib/libhidltransport.so
+vendor/xiaomi/ruby/proprietary/vendor/lib/libperfctl_vendor.so
+vendor/xiaomi/ruby/proprietary/vendor/lib64/libhidltransport.so
+vendor/xiaomi/ruby/proprietary/vendor/lib64/libperfctl_vendor.so
 
 # Camera Configs
 vendor/etc/camera/model/dof_model/capture_cache
@@ -1214,9 +1228,9 @@ vendor/firmware/txpowerctrl_gl_u.cfg
 vendor/firmware/txpowerctrl_in.cfg
 vendor/firmware/txpowerctrl_in_u.cfg
 
-# Connectivity (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU3AWF1 release-keys
-vendor/firmware/soc5_0_ram_mcu_1_1_hdr.bin|4aef2e830860f76b4d0c383eb16433ecc0e1c740
-vendor/firmware/soc5_0_ram_wmmcu_1_1_hdr.bin|81f9c347afd4ee17a257cb07c4762c97c17d7db3
+# Connectivity (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU4AWG7 release-keys
+vendor/firmware/soc5_0_ram_mcu_1_1_hdr.bin|4cdb4209e9fe15b20fa5ee9722201ec7fd1160b9
+vendor/firmware/soc5_0_ram_wmmcu_1_1_hdr.bin|98a1f0af9ddcea4dd7a1cd244e4b4ee056fafbf5
 
 # ConsumerIr
 vendor/lib64/hw/consumerir.common.so
@@ -1352,6 +1366,46 @@ vendor/etc/cust_color.xml
 vendor/etc/cust_color_dsi_m16_36_02_0b_dsc_vdo.xml
 vendor/etc/cust_color_dsi_m16_42_0d_0a_dsc_vdo.xml
 vendor/etc/cust_color_dsi_m16_45_02_0c_dsc_vdo.xml
+
+# Dolby Miui
+system/lib/vendor.dolby.hardware.dms@2.0.so
+system/lib64/vendor.dolby.hardware.dms@2.0.so
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/dolby/dax-rubypro.xml
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/lib/libdapparamstorage.so
+vendor/lib/libdeccfg.so
+vendor/lib/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdeccfg.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+
+# Dolby SoundFX
+vendor/lib/soundfx/libswdap.so
+vendor/lib/soundfx/libswgamedap.so
+vendor/lib/soundfx/libswvqe.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswvqe.so
+
+# Dolby MediaCodecs
+vendor/lib/libstagefright_soft_ac4dec.so
+vendor/lib/libstagefright_soft_ddpdec.so
+vendor/lib/libstagefrightdolby.so
+vendor/lib64/libstagefright_soft_ac4dec.so
+vendor/lib64/libstagefright_soft_ddpdec.so
+vendor/lib64/libstagefrightdolby.so
+
+# Dolby App (OnePlus)
+system_ext/etc/sysconfig/config-com.dolby.daxappui.xml|fce084b5ea52db53d25a7bbf64d8c7ce
+system_ext/etc/sysconfig/config-com.dolby.daxservice.xml|cd1424d569038a393fccadb457c930c2
+system_ext/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml|3d8dfe8008f667cf2b3572983c08c3af
+system_ext/priv-app/DaxUI/DaxUI.apk|feae263be94cabae10ade62f50fb7051
+system_ext/priv-app/daxService/daxService.apk|2e2c5f6939d7545c7f59fa2b15deb727
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
@@ -1721,7 +1775,6 @@ vendor/etc/init/vpud.rc
 vendor/lib/AV1SecureVdecCA.so
 vendor/lib/AVCSecureVdecCA.so
 vendor/lib/HEVCSecureVdecCA.so
-vendor/lib/VP9SecureVdecCA.so
 vendor/lib/libvcodec_oal.so
 vendor/lib/libvcodec_utility.so
 vendor/lib/libvcodecdrv.so
@@ -1729,6 +1782,7 @@ vendor/lib/libvcodecdrv_header_stub.so
 vendor/lib/libvpu.so
 vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
+vendor/lib/VP9SecureVdecCA.so
 vendor/lib64/libvpu.so
 
 # Media (OMX)
@@ -1779,11 +1833,6 @@ vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/gsm0710muxd
-vendor/etc/init/gsm0710muxd.rc
-vendor/etc/init/init.cccimdinit.rc
-vendor/etc/init/init.cccirpcd.rc
-vendor/etc/init/mtkrild.rc
-vendor/etc/init/muxreport.rc
 vendor/etc/ecc_list.xml
 vendor/etc/ecc_list_OP01.xml
 vendor/etc/ecc_list_OP02.xml
@@ -1794,6 +1843,14 @@ vendor/etc/ecc_list_OP18.xml
 vendor/etc/ecc_list_OP20.xml
 vendor/etc/ecc_list_OP236.xml
 vendor/etc/ecc_list_preference.xml
+vendor/etc/init/gsm0710muxd.rc
+vendor/etc/init/init.cccimdinit.rc
+vendor/etc/init/init.cccirpcd.rc
+vendor/etc/init/mtkrild.rc
+vendor/etc/init/muxreport.rc
+vendor/etc/power_app_cfg.xml
+vendor/etc/powercontable.xml
+vendor/etc/powerscntbl.xml
 vendor/etc/special_pws_channel.xml
 vendor/etc/vendor-apns-conf.xml
 vendor/etc/virtual-spn-conf-by-efgid1.xml
@@ -1888,5 +1945,5 @@ vendor/etc/wifi/passpointProfile.conf
 vendor/firmware/wifi.cfg
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 
-# Wi-Fi (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU3AWF1 release-keys
-vendor/firmware/WIFI_RAM_CODE_soc5_0_1_1.bin|a5eac373bd44011512f43fb0cbd38482349be367
+# Wi-Fi (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU4AWG7 release-keys
+vendor/firmware/WIFI_RAM_CODE_soc5_0_1_1.bin|88576f25c14cd388002a28e85a5945090d2803f1
