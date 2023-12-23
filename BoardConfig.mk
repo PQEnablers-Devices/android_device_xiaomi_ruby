@@ -6,6 +6,7 @@
 
 DEVICE_PATH := device/xiaomi/ruby
 
+BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
@@ -37,6 +38,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
+
+# Audio
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := ruby
@@ -148,6 +152,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # SELinux
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # SPL
 VENDOR_SECURITY_PATCH := 2023-07-01
