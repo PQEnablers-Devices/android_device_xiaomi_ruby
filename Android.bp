@@ -6,3 +6,22 @@
 
 soong_namespace {
 }
+
+cc_library_static {
+    name: "libinit_xiaomi_ruby",
+    srcs: [
+        "libinit_variant.cpp",
+        "libinit_utils.cpp",
+    ],
+    whole_static_libs: ["libbase"],
+    export_include_dirs: ["include"],
+    recovery_available: true,
+}
+
+cc_library_static {
+    name: "init_xiaomi_ruby",
+    srcs: ["init_xiaomi_ruby.cpp"],
+    whole_static_libs: ["libinit_xiaomi_ruby"],
+    include_dirs: ["system/core/init"],
+    recovery_available: true,
+}
