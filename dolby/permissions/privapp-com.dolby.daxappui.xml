@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.dolby.daxappui">
+    <!-- Android Standard permissions -->
+    <permission name="android.permission.BLUETOOTH" />
+    <permission name="android.permission.BLUETOOTH_ADMIN" />
+    <permission name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <permission name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <permission name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <permission name="android.permission.READ_PHONE_STATE" />
+    <permission name="android.permission.READ_EXTERNAL_STORAGE" />
+    <permission name="android.permission.MANAGE_USERS" />
+    <!-- Bind QS Tiles permissions -->
+    <permission name="android.permission.BIND_QUICK_SETTINGS_TILE" />
+    <!-- Extra Permissions from other parts of Dolby App -->
+    <!-- Search Bar -->
+    <permission name="android.permission.RECORD_AUDIO" />
+    <!-- Twilight Manager -->
+    <permission name="android.permission.ACCESS_COARSE_LOCATION" />
+    <permission name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Dolby Specific Permissions -->
+    <permission name="com.dolby.permission.DOLBY_UPDATE_BROADCAST" />
+    </privapp-permissions>
+</permissions>
