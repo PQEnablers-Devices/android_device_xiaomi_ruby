@@ -1,2 +1,8 @@
+# Camera
+type hal_xiaomi_camera_hwservice, hwservice_manager_type;
+
+# Dolby
+type hal_dms_hwservice, hwservice_manager_type;
+
 # Fingerprint
 type vendor_hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
